@@ -91,6 +91,16 @@ print(df[['TransactionDate', 'LateNightTransaction']])
 
 
 # create a HighLoginAttempt flag based on the number of login attempts
+'''
+df['HighLoginAttempt'] = df['LoginAttempts'] >= 3
+print(df[['LoginAttempts', 'HighLoginAttempt']].head(10))
+'''
+
+
 # create a LongDurationTransaction flag based on transaction duration
+
+df['LongDurationTransaction'] = df['TransactionDuration'] > 60
+print(df[['TransactionDuration', 'LongDurationTransaction']].head(10))
+
 # Which transactions look suspicious when multiple risk signals happen together?
 # Save the cleaned dataset in a new CSV file for MySQL import
