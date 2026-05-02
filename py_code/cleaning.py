@@ -98,9 +98,32 @@ print(df[['LoginAttempts', 'HighLoginAttempt']].head(10))
 
 
 # create a LongDurationTransaction flag based on transaction duration
-
+'''
 df['LongDurationTransaction'] = df['TransactionDuration'] > 60
 print(df[['TransactionDuration', 'LongDurationTransaction']].head(10))
+'''
 
 # Which transactions look suspicious when multiple risk signals happen together?
+
+# Late Night flag
+df['LateNightTransaction'] = (
+    (df['TransactionDate'].dt.hour >= 22) | 
+    (df['TransactionDate'].dt.hour < 6)
+)
+# High login attempts
+df['HighLoginAttempt'] = df['LoginAttempts'] >= 3
+# Long duration (using quantile)
+threshold = df['TransactionDuration'].quantile(0.95)
+df['LongDurationTransaction'] = df['TransactionDuration'] > threshold
+
+# Create a risk score by adding flags
+df['RiskScore'] = (
+    df['LateNightTransaction'].astype(int) +
+    df['HighLoginAttempt'].astype(int) +
+    df['LongDurationTransaction'].astype(int)
+)
+df['SuspiciousTransaction'] = df['RiskScore'] >= 2 # Flag suspicious transactions (2 or more signals)
+suspicious = df[df['SuspiciousTransaction']] # Show suspicious transactions
+print(suspicious[['TransactionID', 'RiskScore', 'SuspiciousTransaction']])
+
 # Save the cleaned dataset in a new CSV file for MySQL import
