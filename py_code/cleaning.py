@@ -129,3 +129,6 @@ print(suspicious[['TransactionID', 'RiskScore', 'SuspiciousTransaction']])
 
 
 # Save the cleaned dataset in a new CSV file for MySQL import
+'''
+df.to_csv(r'C:\Users\anind\OneDrive\Desktop\PythonVSC\Project\Customer-Transaction-Analytics\data\Clean\cleaned_transactions.csv', index=False)
+'''
