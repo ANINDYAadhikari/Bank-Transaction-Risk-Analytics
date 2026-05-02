@@ -104,7 +104,7 @@ print(df[['TransactionDuration', 'LongDurationTransaction']].head(10))
 '''
 
 # Which transactions look suspicious when multiple risk signals happen together?
-
+'''
 # Late Night flag
 df['LateNightTransaction'] = (
     (df['TransactionDate'].dt.hour >= 22) | 
@@ -125,5 +125,7 @@ df['RiskScore'] = (
 df['SuspiciousTransaction'] = df['RiskScore'] >= 2 # Flag suspicious transactions (2 or more signals)
 suspicious = df[df['SuspiciousTransaction']] # Show suspicious transactions
 print(suspicious[['TransactionID', 'RiskScore', 'SuspiciousTransaction']])
+'''
+
 
 # Save the cleaned dataset in a new CSV file for MySQL import
