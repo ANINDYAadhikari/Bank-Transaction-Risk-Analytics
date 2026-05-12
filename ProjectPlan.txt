@@ -1,11 +1,6 @@
-Perfect. Here's your complete 2-week project plan:
-
----
-
 ## 💳 Customer Transaction & Spending Analytics
 ### Python → MySQL → Power BI
 
----
 
 ## 📁 Project Structure
 
@@ -144,7 +139,9 @@ engine = create_engine('mysql+mysqlconnector://root:yourpassword@localhost/bank_
 
 df.to_sql('transactions', con=engine, if_exists='replace', index=False)
 print("Loaded to MySQL successfully!")
-```
+```  
+
+
 
 First create the database in MySQL Workbench:
 ```sql
@@ -291,14 +288,3 @@ Avg Transaction = AVERAGE(transactions[TransactionAmount])
 
 ---
 
-## 🌟 What Makes This Portfolio-Ready
-
-- ✅ Python used for real feature engineering, not just basic cleaning
-- ✅ MySQL has 6 meaningful queries covering JOINs, GROUP BY, HAVING, subqueries
-- ✅ Power BI has 4 pages with DAX measures — not just drag-and-drop charts
-- ✅ Anomaly detection page directly connects your cybersecurity background to analytics
-- ✅ Business framing — every page answers a question a finance manager would actually ask
-
----
-
-Want me to start with the **full Python cleaning script** or the **MySQL schema + all queries** first?
