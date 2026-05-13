@@ -141,7 +141,6 @@ df.to_sql('transactions', con=engine, if_exists='replace', index=False)
 print("Loaded to MySQL successfully!")
 ```  
 
-
 First create the database in MySQL Workbench:
 ```sql
 CREATE DATABASE bank_analytics;
