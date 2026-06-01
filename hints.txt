@@ -16,6 +16,7 @@
 **Q17: Load cleaned CSV into MySQL**
 👉 Use `LOAD DATA INFILE`
 
+
 **Q18: Verify all rows loaded**
 👉 Use `SELECT COUNT(*)`
 
@@ -24,6 +25,7 @@
 
 **Q20: Check truncation/import errors**
 👉 Use `SHOW WARNINGS`
+
 
 ---
 
