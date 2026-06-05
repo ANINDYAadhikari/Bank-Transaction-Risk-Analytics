@@ -24,3 +24,12 @@ SELECT
 FROM transactions
 GROUP BY TransactionType
 ORDER BY total_amount DESC;
+
+-- Month-wise transaction volume and value
+SELECT
+    MONTHNAME(TransactionDate) AS month,
+    COUNT(*) AS total_transactions,
+    ROUND(SUM(TransactionAmount), 2) AS monthly_volume
+FROM transactions
+GROUP BY MONTH(TransactionDate), MONTHNAME(TransactionDate)
+ORDER BY MONTH(TransactionDate);

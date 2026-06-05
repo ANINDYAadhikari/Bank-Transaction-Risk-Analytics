@@ -182,13 +182,13 @@ ORDER BY total_amount DESC;
 **C) Monthly Trend**
 ```sql
 -- Month-wise transaction volume and value
-SELECT 
-    Month,
+SELECT
+    MONTHNAME(TransactionDate) AS month,
     COUNT(*) AS total_transactions,
     ROUND(SUM(TransactionAmount), 2) AS monthly_volume
 FROM transactions
-GROUP BY Month
-ORDER BY Month;
+GROUP BY MONTH(TransactionDate), MONTHNAME(TransactionDate)
+ORDER BY MONTH(TransactionDate);
 ```
 
 **D) Suspicious Transaction Summary**
