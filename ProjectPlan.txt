@@ -165,17 +165,18 @@ ORDER BY total_spend DESC
 LIMIT 20;
 ```
 
-**B) Spending by Category**
+**B) Spending by transaction type**
 ```sql
--- Which merchant categories drive the most volume?
-SELECT 
-    MerchantCategory,
+-- Analyze transaction volume and spending by transaction type
+-- Which transaction types generate the most transactions and highest total transaction amounts?
+SELECT
+    TransactionType,
     COUNT(*) AS transaction_count,
-    ROUND(SUM(TransactionAmount), 2) AS total_spend,
-    ROUND(AVG(TransactionAmount), 2) AS avg_spend
+    ROUND(SUM(TransactionAmount), 2) AS total_amount,
+    ROUND(AVG(TransactionAmount), 2) AS avg_amount
 FROM transactions
-GROUP BY MerchantCategory
-ORDER BY total_spend DESC;
+GROUP BY TransactionType
+ORDER BY total_amount DESC;
 ```
 
 **C) Monthly Trend**
