@@ -1,3 +1,4 @@
+'''
 1) Python: Data Cleaning & Feature Engineering Questions
 
 How many rows and columns are in the dataset, and what are the data types of each column?
@@ -12,6 +13,7 @@ Can you create a HighLoginAttempt flag based on the number of login attempts?
 Can you create a LongDurationTransaction flag based on transaction duration?
 Which transactions look suspicious when multiple risk signals happen together?
 Can you save the cleaned dataset in a new CSV file for MySQL import?
+'''
 
 2) MySQL: Schema & Data Loading Questions
 
