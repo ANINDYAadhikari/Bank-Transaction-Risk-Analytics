@@ -56,3 +56,14 @@ WHERE TransactionAmount > 10000
 GROUP BY Location
 ORDER BY suspicious_count DESC;
 
+-- Customers with the highest average transaction amounts
+SELECT 
+    AccountID,
+    CustomerAge,
+    ROUND(AVG(TransactionAmount), 2) AS avg_spend,
+    COUNT(*) AS total_txns
+FROM transactions
+GROUP BY AccountID, CustomerAge
+HAVING COUNT(*) > 2
+ORDER BY avg_spend DESC
+LIMIT 10;
