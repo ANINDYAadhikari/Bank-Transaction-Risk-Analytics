@@ -67,3 +67,23 @@ GROUP BY AccountID, CustomerAge
 HAVING COUNT(*) > 2
 ORDER BY avg_spend DESC
 LIMIT 10;
+
+-- Transaction type breakdown by spending tier
+SELECT
+    TransactionType,
+    CASE
+        WHEN TransactionAmount < 1000 THEN 'Low'
+        WHEN TransactionAmount BETWEEN 1000 AND 5000 THEN 'Medium'
+        ELSE 'High'
+    END AS SpendingTier,
+    COUNT(*) AS transaction_count,
+    ROUND(SUM(TransactionAmount), 2) AS total_amount
+FROM transactions
+GROUP BY
+    TransactionType,
+    CASE
+        WHEN TransactionAmount < 1000 THEN 'Low'
+        WHEN TransactionAmount BETWEEN 1000 AND 5000 THEN 'Medium'
+        ELSE 'High'
+    END
+ORDER BY TransactionType, total_amount DESC;
