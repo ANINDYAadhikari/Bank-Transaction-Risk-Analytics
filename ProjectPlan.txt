@@ -274,7 +274,7 @@ Avg Transaction = AVERAGE(transactions[TransactionAmount])
 - Map or bar chart: Suspicious transactions by location
 - KPI: Total suspicious volume in ₹
 - Bar chart: Late night vs normal hour transaction count
-- Table: Top 10 flagged transactions (CustomerID, Amount, Location, Hour)
+- Table: Top 10 flagged transactions (CustomerID, Amount, Location, Hour) 
 
 **Page 4 — Transaction Patterns**
 - Heatmap-style matrix: Day of week vs Hour (transaction frequency)
