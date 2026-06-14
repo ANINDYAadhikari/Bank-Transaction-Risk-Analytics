@@ -13,7 +13,7 @@
 
 ---
 
-# 🏦 BankLens — Transaction Intelligence & Risk Analytics
+# 🏦 Bank-Transaction-Risk-Analytics — Transaction Intelligence & Risk Analytics
 
 > **An end-to-end banking analytics platform that transforms raw transaction records into executive-ready business intelligence — spanning Python data engineering, MySQL querying, and a four-page Power BI dashboard with built-in risk detection.**
 
@@ -40,7 +40,7 @@
 
 ## 📌 Project Overview
 
-BankLens is a portfolio-grade, end-to-end analytics project built on a real-world bank transaction dataset spanning 2,512 records across 43 US cities from January 2023 to January 2024. The project addresses a core challenge that banking and fintech teams face daily: turning high-volume, multi-dimensional transaction logs into actionable insight — from spotting high-risk customers to understanding seasonal spending shifts.
+Bank-Transaction-Risk-Analytics is a portfolio-grade, end-to-end analytics project built on a real-world bank transaction dataset spanning 2,512 records across 43 US cities from January 2023 to January 2024. The project addresses a core challenge that banking and fintech teams face daily: turning high-volume, multi-dimensional transaction logs into actionable insight — from spotting high-risk customers to understanding seasonal spending shifts.
 
 The pipeline moves through three distinct layers. Python handles all data wrangling and feature engineering, including the construction of a composite risk scoring model that flags suspicious transactions by combining late-night activity, abnormal login attempts, and outlier processing times. MySQL takes the cleaned dataset and answers seven business questions through structured SQL queries, covering customer spend ranking, channel behavior, monthly trends, and geographic risk mapping. Power BI then pulls it all together in an interactive four-page dashboard that lets stakeholders slice the data by month, channel, location, day of week, and transaction type.
 
@@ -391,7 +391,7 @@ The Power BI file (`powerbi/bank_analytics_powerBI.pbix`) renders a four-page in
 ## 📁 Project Structure
 
 ```
-Customer-Transaction-Analytics/
+Bank-Transaction-Risk-Analytics/
 │
 ├── data/                               # Dataset files
 │   ├── bank_transactions_data.csv      # Raw dataset (2,512 × 16)
@@ -439,8 +439,8 @@ Customer-Transaction-Analytics/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/ANINDYAadhikari/Customer-Transaction-Analytics.git
-cd Customer-Transaction-Analytics
+git clone https://github.com/ANINDYAadhikari/Bank-Transaction-Risk-Analytics
+cd Bank-Transaction-Risk-Analytics
 
 # 2. Open the folder in VSCode
 code .
