@@ -4,17 +4,14 @@
 # Author -- Anindya Adhikari
 # ======================================
 
-
 # --- Import Libraries ---
 import pandas as pd 
 import numpy as np 
 
 
-
 # --- Load DataSet ---
 df = pd.read_csv(r"C:\Project\Customer-Transaction-Analytics\data\bank_transactions_data.csv")
 print("DataSet Loaded Successfully \n")
-
 
 
 # How many rows and columns are in the dataset, and what are the data types of each column?
