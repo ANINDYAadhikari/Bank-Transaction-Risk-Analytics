@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.types import Integer, Float, String
 
 # --- Load DataSet ---
-df = pd.read_csv(r'C:\Users\anind\OneDrive\Desktop\PythonVSC\Project\Customer-Transaction-Analytics\data\Clean\cleaned_transactions.csv')
+df = pd.read_csv(r'C:\Project\Customer-Transaction-Analytics\data\Clean\cleaned_transactions.csv')
 print("DataSet loaded Succssfully")
 
 # STEP 3: CONNECT TO MYSQL
