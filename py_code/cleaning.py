@@ -12,7 +12,7 @@ import numpy as np
 
 
 # --- Load DataSet ---
-df = pd.read_csv(r"C:\Users\anind\OneDrive\Desktop\PythonVSC\Project\Customer-Transaction-Analytics\data\bank_transactions_data.csv")
+df = pd.read_csv(r"C:\Project\Customer-Transaction-Analytics\data\bank_transactions_data.csv")
 print("DataSet Loaded Successfully \n")
 
 
