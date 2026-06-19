@@ -591,7 +591,7 @@ This project was built as part of a professional portfolio to demonstrate end-to
 ```
 Anindya Adhikari
 B.Tech — Swami Vivekananda University
-Specialization: Cybersecurity & Data Analytics
+Specialization: Data Analytics & Cybersecurity 
 
 🔗 LinkedIn: https://linkedin.com/in/anindya-adhikari-55aa89239
 💻 GitHub:   https://github.com/ANINDYAadhikari
