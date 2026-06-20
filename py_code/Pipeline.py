@@ -31,5 +31,4 @@ df.to_sql(
     },
     chunksize=1000         # improves performance for large data
 )
-
 print("Loaded to MySQL successfully!")
