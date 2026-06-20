@@ -68,6 +68,7 @@ HAVING COUNT(*) > 2
 ORDER BY avg_spend DESC
 LIMIT 10;
 
+
 -- Transaction type breakdown by spending tier
 SELECT
     TransactionType,
