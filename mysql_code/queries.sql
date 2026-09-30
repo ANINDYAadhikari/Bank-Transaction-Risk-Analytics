@@ -34,16 +34,6 @@ FROM transactions
 GROUP BY MONTH(TransactionDate), MONTHNAME(TransactionDate)
 ORDER BY MONTH(TransactionDate);
 
--- How many suspicious transactions per location?
-SELECT 
-    Location,
-    COUNT(*) AS suspicious_count,
-    ROUND(SUM(TransactionAmount), 2) AS suspicious_volume
-FROM transactions
-WHERE IsSuspicious = 1
-GROUP BY Location
-ORDER BY suspicious_count DESC;
-
 -- Locations with potentially suspicious transactions
 -- (amount > 10000 or login attempts > 3)
 SELECT
@@ -53,6 +43,16 @@ SELECT
 FROM transactions
 WHERE TransactionAmount > 10000
    OR LoginAttempts > 3
+GROUP BY Location
+ORDER BY suspicious_count DESC;
+
+-- How many suspicious transactions per location?
+SELECT 
+    Location,
+    COUNT(*) AS suspicious_count,
+    ROUND(SUM(TransactionAmount), 2) AS suspicious_volume
+FROM transactions
+WHERE IsSuspicious = 1
 GROUP BY Location
 ORDER BY suspicious_count DESC;
 
